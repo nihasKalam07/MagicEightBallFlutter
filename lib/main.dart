@@ -38,14 +38,16 @@ class _MagicBallPageState extends State<MagicBallPage> {
 
   @override
   Widget build(BuildContext context) {
-    return Center(
-      child: Padding(
-        padding: const EdgeInsets.all(8.0),
-        child: TextButton(
-          onPressed: () {
-            changeBallNumber();
-          },
-          child: Image.asset('images/ball$ballNumber.png'),
+    return SafeArea(
+      child: Center(
+        child: Padding(
+          padding: const EdgeInsets.all(8.0),
+          child: TextButton(
+            onPressed: () {
+              changeBallNumber();
+            },
+            child: Image.asset('images/ball$ballNumber.png'),
+          ),
         ),
       ),
     );
